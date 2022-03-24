@@ -1,0 +1,27 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+    height: 100%;
+}
+
+.content>.titulo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px 20px 30px 20px;
+}
+
+.content>.content-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+.content>.content-section>.section-text {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}

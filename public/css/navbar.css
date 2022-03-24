@@ -2,6 +2,10 @@
     --gradient-left: #000077dd;
     --gradient-center: #ffffff77;
     --gradient-right: #770066dd;
+    --gradient-right-2: #77006670;
+    --gradient-right-3: #770066aa;
+
+    --background-color: #232428;
 }
 
 .navbar {
@@ -9,6 +13,19 @@
     flex-direction: column;
     row-gap: 20px;
     padding: 20px;
+
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-image: linear-gradient(to bottom, var(--background-color), var(--gradient-right-2), var(--background-color)) 1;
+    animation: divNavbarContent 3s infinite;
+}
+
+@keyframes divNavbarContent {
+    50% {
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-image: linear-gradient(to bottom, var(--background-color), var(--gradient-right-3), var(--background-color)) 1;
+    }
 }
 
 .navbar>.photo {
@@ -36,10 +53,10 @@
     min-height: 200px;
     background: linear-gradient(to right, var(--gradient-left), var(--gradient-center), var(--gradient-right));
     border-radius: 50%;
-    animation: borderBackgroundAnimated 2s infinite;
+    animation: borderPhotoRotation 2s infinite;
 }
 
-@keyframes borderBackgroundAnimated {
+@keyframes borderPhotoRotation {
     0% {
         transform: rotate(0deg);
         opacity: 1;
@@ -68,8 +85,9 @@
 }
 
 .navbar>.contacts>li {
-    display: grid;
-    grid-template-columns: 25px auto;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    column-gap: 15px;
     height: 25px;
 }

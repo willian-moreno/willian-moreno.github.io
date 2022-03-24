@@ -1,0 +1,7 @@
+.footer {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 20px;
+    padding: 20px;
+    margin-top: auto;
+}
