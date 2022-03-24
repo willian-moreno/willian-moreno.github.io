@@ -1,0 +1,45 @@
+:root {
+    --color: #eeeeeedd;
+    --background-color: #232428;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+
+    color: var(--color);
+}
+
+body {
+    background-color: var(--background-color);
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
+}
+
+@media screen and (max-width:900px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar>.contacts>li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25px;
+    }
+
+    .navbar>.contacts>li>img {
+        margin: -20px;
+    }
+}
